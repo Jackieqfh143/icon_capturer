@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--默认字体大小 -->
+    <dimen name="design_bottom_navigation_text_size">14sp</dimen>
+    <!--选中字体大小 -->
+    <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
+
+    <!--imageView 边框大小-->
+    <dimen name="borderThickness">3dp</dimen>
+</resources>

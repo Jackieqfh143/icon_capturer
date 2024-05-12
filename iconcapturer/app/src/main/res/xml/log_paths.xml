@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path
+        name="File"
+        path="images/"/>
+
+    <files-path
+        name="LogFile"
+        path="log"/>
+
+
+    <files-path
+        name="APKFile"
+        path="apks"/>
+
+</paths>

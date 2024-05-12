@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="500dp"
+    android:layout_gravity="center"
+    android:background="@drawable/edit_text_border"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/close_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp">
+        <ImageButton
+            android:id="@+id/close_fragment_btn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@null"
+            android:src="@drawable/decheck_all_btn"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-25dp">
+        <TextView
+            android:id="@+id/fragment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="使用教程"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/title_layout">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_line"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/spacer">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/help_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+    </LinearLayout>
+
+</RelativeLayout>

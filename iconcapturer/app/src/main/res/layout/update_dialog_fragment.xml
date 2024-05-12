@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:background="@drawable/edit_text_border"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/close_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp">
+        <ImageButton
+            android:id="@+id/close_fragment_btn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@null"
+            android:src="@drawable/decheck_all_btn"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="-75dp">
+            <TextView
+                android:id="@+id/fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="软件更新提醒"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/fragment_message"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:text="检测到有新的版本的软件是否更新？"
+            android:paddingLeft="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_line"/>
+
+        <TextView
+            android:id="@+id/app_update_log_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="更新日志" />
+
+        <TextView
+            android:id="@+id/app_update_log"
+            android:scrollbars = "vertical"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_height="120dp"
+            android:background="@drawable/edit_text_square_border"
+            android:text="修复已知bug"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkbox_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/title_layout"
+        android:padding="10dp">
+        <CheckBox
+            android:id="@+id/skip_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_gravity="left"
+            android:text="此版本不再提醒" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@id/checkbox_layout"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp">
+        <LinearLayout
+            android:id="@+id/confirm_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_border"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageButton
+                android:id="@+id/confirm_btn"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@null"
+                android:src="@drawable/check_all_btn"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:id="@+id/confirm_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@drawable/bottom_text_selector"
+                android:paddingBottom="5dp"
+                android:text="确定"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:id="@+id/cancel_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_border"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageButton
+                android:id="@+id/cancel_btn"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@null"
+                android:src="@drawable/decheck_all_btn"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:id="@+id/cancel_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@drawable/bottom_text_selector"
+                android:paddingBottom="5dp"
+                android:text="取消"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

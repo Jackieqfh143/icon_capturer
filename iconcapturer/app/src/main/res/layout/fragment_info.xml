@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:background="@drawable/edit_text_border"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/close_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp">
+        <ImageButton
+            android:id="@+id/close_fragment_btn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@null"
+            android:src="@drawable/decheck_all_btn"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="-25dp">
+            <TextView
+                android:id="@+id/fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="更新日志"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_line"/>
+
+        <TextView
+            android:id="@+id/app_update_log"
+            android:scrollbars = "vertical"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_height="200dp"
+            android:background="@drawable/edit_text_square_border"
+            android:text="修复已知bug"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

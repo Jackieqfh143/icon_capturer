@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LogReportActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/log_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        android:paddingTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="标题"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/title_textview"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="9"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:background="@drawable/edit_text_border"
+                android:textAlignment="textStart"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="内容"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                />
+
+            <EditText
+                android:id="@+id/content_textview"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_weight="9"
+                android:textSize="18sp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:background="@drawable/edit_text_border"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/divider_line"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="附件"
+                    />
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"/>
+
+                <ImageButton
+                    android:id="@+id/add_file_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:src="@drawable/add_btn"
+                    android:layout_marginTop="3dp"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/log_recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:clipToPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_line"
+            android:layout_gravity="center"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/log_send_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_border"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/send_image_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:src="@drawable/send_btn"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="3dp"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@drawable/bottom_text_selector"
+                android:paddingBottom="5dp"
+                android:text="发送"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/upload_progress_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/progress_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:text="进度: 0%"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                />
+
+            <ProgressBar
+                android:id="@+id/upload_progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_gravity="center"
+                android:layout_weight="8" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <ImageButton
+                    android:id="@+id/upload_cancel_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@null"
+                    android:src="@drawable/close"
+                    android:scaleType="centerCrop"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
